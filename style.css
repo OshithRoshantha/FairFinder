@@ -32,6 +32,7 @@
     font-size: medium;
     font-family: "Roboto", sans-serif;
     color: #20415b;
+    text-decoration: none;
 }
 .headerBtn:hover{
     background-color: #ddeff8;
@@ -71,6 +72,11 @@
 @keyframes upDown {
     0% { transform: translateY(0); }
     50% { transform: translateY(-30px); }
+    100% { transform: translateY(0); }
+}
+@keyframes upDown2 {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
     100% { transform: translateY(0); }
 }
 .featuresBar{
@@ -119,7 +125,7 @@
     font-size: 120%; 
     font-weight: 700;
     color: white;
-    padding: 1% 1%;
+    padding: 2% 1%;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -229,7 +235,7 @@
     width: 100%;
     background-color: #ddeff8;
     position: absolute;
-    top: 194.3%;
+    top: 196%;
 }
 .container2{
     width: 100vw;
@@ -258,3 +264,214 @@
     top: 10%;
     left: 10%;
 }
+.contactHeading{
+    font-family: "Poppins", sans-serif;
+    color: #20415b;
+    font-weight: 800;
+    font-size: 300%;
+}
+.contactTagline{
+    font-family: "Poppins", sans-serif;
+    color: #446883;
+    font-weight: 700;
+}
+.contactText{
+    display: flex;
+    flex-direction: column;
+}
+.support,.feedback{
+    background-color: #20415b;
+    border-radius: 20px;
+    height: 60vh;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    color: white;
+}
+.container3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('./Assets/bg2.png');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center; 
+}
+.footer2{
+    margin-top: 6%;
+}
+.boxHeading{
+    text-align: center;
+    font-weight: 800;
+    font-size: 150%;
+}
+.boxText{
+    text-align: center;
+    font-size: 100%;
+}
+.boxBtn{
+    background-color: red;
+    width: 30%;
+    padding: 3% 0%;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 30px;
+    text-decoration: none;
+    color: white;
+}
+.boxBtn2{
+    background-color: red;
+    width: 40%;
+    padding: 3% 0%;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 30px;
+    text-decoration: none;
+    color: white; 
+}
+.boxBtn:hover{
+    background-color: rgb(194, 3, 3);
+}
+.boxBtn:active{
+    background-color: white;
+}
+.boxIcon{
+    width: 13%;
+}
+.contactImg{
+    height: 43%;
+    top: 47%;
+    position: absolute;
+    animation: upDown2 2s infinite;
+}
+.container3_1{
+    padding-top: 2%;
+}
+.contactHeader{
+    background-color: transparent;
+}
+.divider2{
+    height: 1px;
+    width: 100%;
+    background-color: #ddeff8;
+    position: absolute;
+    bottom: 8%;
+}
+.opacity{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: black; 
+    z-index: 99; 
+    opacity: 70%;
+}
+.formPopup{
+    z-index: 9999;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.formContainer{
+    background-color: white;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    text-align: left;
+    border: solid 1px #20415b;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-radius: 20px;
+}
+.popupTagline{
+    font-family: "Roboto", sans-serif;
+    color: #446883;
+}
+.popupHeader{
+    font-family: "Roboto", sans-serif;
+    color: #20415b;
+    font-weight: 900;
+    font-size: 250%;
+}
+.input{
+    padding: 1% 0%;
+    width: 25%;
+    border: none;
+    font-family: "Roboto", sans-serif;
+    font-size: large;
+    border: solid 1px #20415b;
+    border-radius: 10px;
+    padding-left: 3%;
+    font-size: 90%;
+}
+.input:focus{
+    border: solid 1px #20415b;
+    border-radius: 10px;
+    outline: none;
+}
+.input2{
+    padding: 1% 0%;
+    width: 60%;
+    border: none;
+    font-family: "Roboto", sans-serif;
+    font-size: large;
+    border: solid 1px #20415b;
+    border-radius: 10px;
+    padding-left: 3%;
+    font-size: 90%;
+}
+.input2:focus{
+    border: solid 1px #20415b;
+    border-radius: 10px;
+    outline: none;
+}
+.input3{
+    height: 13vh;
+    width: 95%;
+    border: none;
+    font-family: "Roboto", sans-serif;
+    font-size: large;
+    border: solid 1px #20415b;
+    border-radius: 10px;
+    padding-left: 3%;
+    padding-top: 2%;
+    font-size: 90%;
+}
+.input3:focus{
+    border: solid 1px #20415b;
+    border-radius: 10px;
+    outline: none;
+}
+.inputTag{
+    font-family: "Roboto", sans-serif;
+    color: #20415b;
+}
+.inputBtn{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    width: 20%;
+    font-family: "Roboto", sans-serif;
+    border: none;
+}
+.hidden {
+    display: none;
+}
+.popupClose{
+    position: absolute;
+    height: 5%;
+    cursor: pointer;
+    top: 12%;
+    right: 34%;
+}
+.popupClose:hover{
+    height: 5.3%;
+}
+
