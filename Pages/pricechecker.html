@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FairFinder - Find & Check Bus Tickets</title>
+</head>
+<body>
+    <div class="container">
+        <div class="contentArea">
+            <div class="header">
+                <img class="headerIcon" src="../Assets/logo.png">
+                <a href="../Pages/home.html" class="headerBtn">Home</a>
+                <a href="../Pages/contact.html" class="headerBtn">Contact</a>
+            </div>
+            <div class="middleBlock">
+                <div class="searchBar">
+                    <div class="toggleBtn">
+                        <div onclick="decrease()"  class="toggleI">
+                            <img class="swapIcon" src="../Assets/sub.png">
+                        </div>
+                        <div onclick="increase()" class="toggleI">
+                            <img class="swapIcon"  src="../Assets/add.png">
+                        </div>
+                    </div>
+                    <div class="swap">
+                        <img class="swapIcon" src="../Assets/swap.png">
+                    </div>
+                    <div class="tofrom">
+                        <div class="from">
+                            <div class="searchHeading">ORIGIN</div>
+                            <input type="text" id="userInput" class="fromBar" placeholder="Leaving from...">
+                        </div>
+                        <div class="to">
+                            <div class="searchHeading">DESTINATION</div>
+                            <input type="text" id="userInput2" class="toBar" placeholder="Going to...">
+                        </div>
+                    </div>
+                    <div class="passenger">
+                            <div class="searchHeading">PASSENGERS</div>
+                            <div class="noPassenger">
+                                <span id="counter" class="count">1 </span><span id="passengerText"> passenger</span></div>
+                    </div>
+                    <div class="search">
+                        <img class="searchIcon" src="../Assets/search.png">
+                        <div class="searchBarBtn">Search</div>
+                    </div>
+                </div>
+            </div>
+            <div class="lowerBlock"></div>
+
+
+
+
+
+            <div class="footer">
+                <div class="copyright">© 2024 FairFinder., All rights reserved</div>
+                <a target="_blank" href="../Pages/underConstruction.html" style="text-decoration: none;">
+                    <div class="footerLinks">Terms of use</div>
+                </a>
+                <a target="_blank" href="../Pages/underConstruction.html" style="text-decoration: none;">
+                    <div class="footerLinks">Privacy</div>
+                </a>
+                <div class="author">COSC 31103-Group 01</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let count=1;
+        function updateCounter() {
+            document.getElementById('counter').innerText = count;
+            updateText();
+        }
+        function increase() {
+            count++;
+            updateCounter();
+        }
+        function decrease() {
+            if (count>1) {
+                count--;
+                updateCounter();
+            }
+        }
+        function updateText() {
+            const messageSpan = document.getElementById('passengerText');
+            if (count > 1) {
+                messageSpan.innerText = " passengers";
+            } else {
+                messageSpan.innerText = " passenger";
+            }
+        }
+    </script>  
+</body>
+</html>

@@ -131,6 +131,7 @@
     justify-content: center;
     align-items: center;
     column-gap: 3%;
+    text-decoration: none;
 }
 .checkNowBtn:hover{
     background-color: rgb(194, 3, 3);
@@ -331,10 +332,10 @@
     text-decoration: none;
     color: white; 
 }
-.boxBtn:hover{
+.boxBtn:hover,.boxBtn2:hover{
     background-color: rgb(194, 3, 3);
 }
-.boxBtn:active{
+.boxBtn:active,.boxBtn2:active{
     background-color: white;
 }
 .boxIcon{
@@ -401,7 +402,7 @@
     font-size: 250%;
 }
 .input{
-    padding: 1% 0%;
+    padding: 1.5% 0%;
     width: 25%;
     border: none;
     font-family: "Roboto", sans-serif;
@@ -417,7 +418,7 @@
     outline: none;
 }
 .input2{
-    padding: 1% 0%;
+    padding: 1.5% 0%;
     width: 60%;
     border: none;
     font-family: "Roboto", sans-serif;
@@ -473,4 +474,142 @@
 .popupClose:hover{
     height: 5.3%;
 }
-
+.middleBlock{
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lowerBlock{
+    background-color: blue;
+    height: 40vh;
+}
+.searchBar{
+    background-color: white;
+    width: 70%;
+    height: 9vh;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    border: solid 2px;
+    border-color: #ddeff8;
+}
+.swap{
+    position: absolute;
+    z-index: 9999;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    left: 32%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swapIcon{
+    height: 60%;
+}
+.swap:hover{
+    background-color: #ddeff8;
+}
+.swap:active{
+    background-color: white;
+}
+.tofrom{
+    width: 50%;
+    height: 100%;
+    border-radius: 20px 0px 0px 20px;
+    border-right: solid 2px #ddeff8;
+    display: flex;
+}
+.from{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 3%;
+    row-gap: 3.5%;
+}
+.to{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 3%;
+    row-gap: 3.5%;
+}
+.passenger{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 1.7%;
+    row-gap: 3.5%;
+}
+.search{
+    background-color: #20415b;
+    width: 25%;
+    height: 100%;
+    border-radius: 0px 20px 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 4%;
+    cursor: pointer;
+}
+.search:hover{
+    background-color: #1a3549;
+}
+.search:active{
+    background-color: #446883;
+}
+.searchBarBtn{
+    font-family: "Roboto", sans-serif;
+    color: white;
+    font-size: 100%;
+}
+.searchHeading{
+    font-family: "Roboto", sans-serif;
+    font-weight: 800;
+    font-size: 60%;
+    color: #446883;
+}
+.fromBar,.toBar{
+    font-size: 100%;
+    font-family: "Roboto", sans-serif;
+    border: none;
+}
+.fromBar:focus,.toBar:focus{
+    border: none;
+    outline: none;
+}
+.noPassenger{
+    font-size: 100%;
+    font-family: "Roboto", sans-serif;
+}
+.toggleBtn{
+    position: absolute;
+    right: 35.8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2%;
+}
+.toggleI{
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.toggleI:hover{
+    background-color: #ddeff8;
+}
+.toggleI:active{
+    background-color: white;
+}
