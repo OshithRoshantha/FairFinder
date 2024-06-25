@@ -127,7 +127,7 @@
     background-color: red;
     text-align: center;
     width: 20%;
-    border-radius: 5px;
+    border-radius: 40px;
     margin-top: 6%;
     margin-bottom: 2%;
     font-family: "Roboto", sans-serif;
@@ -497,6 +497,18 @@
     flex-direction: column;
     opacity: 0;
 }
+.intitalDiv{
+    height: 43vh;
+    width: 85%;
+    position: absolute;
+    display: block;
+    z-index: 9999;
+    display: flex;
+}
+.initialDiv_textarea{
+    height: 100%;
+    width: 47%;
+}
 .searchBar{
     background-color: white;
     width: 70%;
@@ -793,4 +805,76 @@
 }
 .bus_infoCount{
     font-weight: 600;
+}
+.busImg {
+    height: 75%;
+    margin-top: 4%;
+    margin-left: 10%;
+    transform: translateX(-100%);
+    animation: slideIn2 2s forwards;
+    opacity: 0;
+    animation-delay: 0.1s;
+}
+@keyframes slideIn2 {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.initialDiv_textarea{
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    margin-left: 5%;
+}
+.initialDivHeading{
+    font-weight: 600;
+    font-size: 140%;
+    color: #20415b;
+    margin-left: -30%;
+}
+.initialDivTagline{
+    font-size: 100%;
+    color: #446883;
+}
+.box{
+    cursor: pointer;
+    width: 40%;
+    height: 30%;
+    border-radius: 30px;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px #82b6d0;
+    text-decoration: none;
+}
+.box:hover{
+    border: solid 1px #20415b;
+}
+.busInfoH1{
+    font-weight: 700;
+    font-size: 120%;
+    color: #20415b;
+}
+.busInfoH2{
+    color: #446883;
+}
+.powered{
+    position: absolute;
+    background-color: black;
+    height: 7%;
+    width: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0%;
+    bottom: 14%;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 80%;
+    border-radius: 15px 0px 0px 15px;
 }

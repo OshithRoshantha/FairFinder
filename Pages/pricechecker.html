@@ -10,8 +10,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../Assets/favicon.png" type="image/png">
     <title>FairFinder - Find & Check Bus Tickets</title>
+    <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('clicked') && urlParams.get('clicked') === 'true') {
+                const var1 = urlParams.get('var1');
+                const var2 = urlParams.get('var2');
+                document.getElementById('userInput').value = var1;
+                document.getElementById('userInput2').value = var2;
+                document.getElementById('search').click();
+            }
+        };
+    </script>
 </head>
 <body>
+    <div class="powered">
+        Powered By
+    </div>
     <div class="container4">
         <div class="divider2"></div>
         <div class="contentArea">
@@ -49,10 +64,25 @@
                             <div class="noPassenger">
                                 <span id="counter" class="count">1 </span><span id="passengerText"> passenger</span></div>
                     </div>
-                    <div onclick="search()" class="search">
+                    <div id="search" onclick="search()" class="search">
                         <img class="searchIcon" src="../Assets/search.png">
                         <div class="searchBarBtn">Search</div>
                     </div>
+                </div>
+            </div>
+            <div id="intitalDiv" class="intitalDiv">
+                <img class="busImg" src="../Assets/bus.png">
+                <div class="initialDiv_textarea">
+                    <div class="initialDivHeading">Buses Information</div><br>
+                    <div class="initialDivTagline">Inter-Provincial Bus Time Tables</div>
+                    <a target="_blank" href="https://drive.google.com/drive/folders/1CU2zYTLomUcnElUnOoB0kdMtQjYK0oVH?usp=share_link" class="box">
+                        <div class="busInfoH1">EXPRESSWAY</div>
+                        <div class="busInfoH2">BUS TIMETABLE</div>
+                    </a>
+                    <a target="_blank" href="https://drive.google.com/drive/folders/1IXszV0llAjHNvumrKR99U0yzGQ7_Rd2x?usp=share_link" class="box">
+                        <div class="busInfoH1">NORMAL</div>
+                        <div class="busInfoH2">BUS TIMETABLE</div>
+                    </a>
                 </div>
             </div>
             <div id="searchResults" class="lowerBlock">
