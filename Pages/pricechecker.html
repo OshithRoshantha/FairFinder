@@ -8,17 +8,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../Assets/favicon.png" type="image/png">
     <title>FairFinder - Find & Check Bus Tickets</title>
 </head>
 <body>
     <div class="container">
         <div class="contentArea">
+           <!-- <img class="checkImg2" src="../Assets/bus.png"> -->
             <div class="header">
                 <img class="headerIcon" src="../Assets/logo.png">
                 <a href="../Pages/home.html" class="headerBtn">Home</a>
                 <a href="../Pages/contact.html" class="headerBtn">Contact</a>
             </div>
             <div class="middleBlock">
+                <div class="checkerHeading">Discover Affordable Bus Fares...</div><br>
                 <div class="searchBar">
                     <div class="toggleBtn">
                         <div onclick="decrease()"  class="toggleI">
@@ -52,12 +55,41 @@
                     </div>
                 </div>
             </div>
-            <div class="lowerBlock"></div>
-
-
-
-
-
+            <div class="lowerBlock">
+                <div class="lowerHeading">
+                    <div class="resultHeading">SELECT YOUR TRIP</div>
+                    <div class="resultTagline">1 result</div>
+                    <hr>
+                </div>  
+                <div class="lower_2">
+                    <div class="lower_left">
+                        <div class="filterMenu">Quick filters<br><br>
+                            <div class="checkboxes">
+                                <input class="cBox" type="checkbox" checked name="mode">  Normal<br>
+                                <input class="cBox" type="checkbox"  name="mode">  Luxury<br>
+                                <input class="cBox" type="checkbox"  name="mode">  Expressway Luxury
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="lower_right">
+                        <div class="resultCard">
+                            <div class="locations">
+                                <span class="start">Colombo Fort</span>
+                                <img class="arrow" src="../Assets/arrow.png">
+                                <span class="end">Anuradhapura</span>
+                            </div>
+                            <div class="businfo">
+                                <img class="infoIcon" src="../Assets/busicon.png">
+                                <span>&nbsp;Normal&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                <img class="infoIcon" src="../Assets/personicon.png">
+                                <span id="bus_infoCount">&nbsp;1&nbsp;</span><span id="bus_infoText">person</span>
+                            </div>
+                            <div class="price">LRK&nbsp;<span class="ticketPrice">000</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="footer">
                 <div class="copyright">© 2024 FairFinder., All rights reserved</div>
                 <a target="_blank" href="../Pages/underConstruction.html" style="text-decoration: none;">
