@@ -12,9 +12,9 @@
     <title>FairFinder - Find & Check Bus Tickets</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container4">
+        <div class="divider2"></div>
         <div class="contentArea">
-           <!-- <img class="checkImg2" src="../Assets/bus.png"> -->
             <div class="header">
                 <img class="headerIcon" src="../Assets/logo.png">
                 <a href="../Pages/home.html" class="headerBtn">Home</a>
@@ -49,41 +49,46 @@
                             <div class="noPassenger">
                                 <span id="counter" class="count">1 </span><span id="passengerText"> passenger</span></div>
                     </div>
-                    <div class="search">
+                    <div onclick="search()" class="search">
                         <img class="searchIcon" src="../Assets/search.png">
                         <div class="searchBarBtn">Search</div>
                     </div>
                 </div>
             </div>
-            <div class="lowerBlock">
+            <div id="searchResults" class="lowerBlock">
                 <div class="lowerHeading">
                     <div class="resultHeading">SELECT YOUR TRIP</div>
-                    <div class="resultTagline">1 result</div>
+                    <div id="resultCount" class="resultTagline">1 result</div>
                     <hr>
                 </div>  
                 <div class="lower_2">
                     <div class="lower_left">
                         <div class="filterMenu">Quick filters<br><br>
                             <div class="checkboxes">
-                                <input class="cBox" type="checkbox" checked name="mode">  Normal<br>
-                                <input class="cBox" type="checkbox"  name="mode">  Luxury<br>
-                                <input class="cBox" type="checkbox"  name="mode">  Expressway Luxury
+                                <input class="cBox" type="checkbox" checked id="normal">  Normal<br>
+                                <input class="cBox" type="checkbox"  id="luxury">  Luxury<br>
+                                <input class="cBox" type="checkbox"  id="expressluxury">  Expressway Luxury
                             </div>
-                            
+                        <div onclick="filter()" class="filterBtn"><img class="filterIcon" src="../Assets/filter.png">&nbsp;Filter</div>    
                         </div>
                     </div>
                     <div class="lower_right">
+                        <div id="noTripDiv" class="noTrips">
+                            <img class="notripImg" src="../Assets/notripImg.png">
+                            <div class="noTripHeading">We couldn't find the right trip.</div>
+                            <div class="noTripTagline">We weren't able to find departures on this route for <span id="date"></span>.</div>
+                        </div>
                         <div class="resultCard">
                             <div class="locations">
-                                <span class="start">Colombo Fort</span>
+                                <span id="start" class="start">Colombo Fort</span>
                                 <img class="arrow" src="../Assets/arrow.png">
-                                <span class="end">Anuradhapura</span>
+                                <span id="end" class="end">Anuradhapura</span>
                             </div>
                             <div class="businfo">
-                                <img class="infoIcon" src="../Assets/busicon.png">
+                                <img class="infoIcon" src="../Assets/busicon.png">&nbsp;
                                 <span>&nbsp;Normal&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                                <img class="infoIcon" src="../Assets/personicon.png">
-                                <span id="bus_infoCount">&nbsp;1&nbsp;</span><span id="bus_infoText">person</span>
+                                <img class="infoIcon" src="../Assets/personicon.png">&nbsp;&nbsp;
+                                <span id="bus_infoCount" class="bus_infoCount"></span>&nbsp;<span id="bus_infoText">person</span>
                             </div>
                             <div class="price">LRK&nbsp;<span class="ticketPrice">000</span></div>
                         </div>
@@ -126,6 +131,7 @@
                 messageSpan.innerText = " passenger";
             }
         }
-    </script>  
+    </script> 
+    <script src="../script.js"></script> 
 </body>
 </html>
