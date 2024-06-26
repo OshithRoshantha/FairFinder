@@ -30,8 +30,8 @@ function filter() {
 function search(){
     var resultsDiv=document.getElementById('searchResults');
     var noTrips= document.getElementById('noTripDiv');
-    const userInput1 = document.getElementById('userInput');
-    const userInput2 = document.getElementById('userInput2');
+    const userInput1 = document.getElementById('from');
+    const userInput2 = document.getElementById('to');
     triggerAlert();
     if(1==1){ //here search correct logic
         document.getElementById('start').textContent = userInput1.value;
@@ -98,54 +98,4 @@ function removeAlert() {
 }
 
 
-let locations=[
-    'Colombo',
-    'Anuradhapura',
-    'Matara',
-    'Galle',
-    'Polonnaruwa',
-    'Jaffna',
-    'Hatton',
-    'Ella',
-    'Badulla'
-];
-let sortedNames = locations.sort();
-let input = document.getElementById("userInput");
-let listContainer = document.querySelector(".list");
 
-input.addEventListener("keyup", (e) => {
-  removeElements();
-  let hasSuggestions = false; 
-  for (let i of sortedNames) {
-    if (
-      i.toLowerCase().startsWith(input.value.toLowerCase()) &&
-      input.value != ""
-    ) {
-      let listItem = document.createElement("li");
-      listItem.classList.add("list-items");
-      listItem.style.cursor = "pointer";
-      let word = "<b>" + i.substr(0, input.value.length) + "</b>";
-      word += i.substr(input.value.length);
-      listItem.innerHTML = word;
-      listItem.addEventListener("click", function () {
-        displayNames(i);
-      });
-      listContainer.appendChild(listItem);
-      hasSuggestions = true; 
-    }
-  }
-  listContainer.style.display = hasSuggestions ? "block" : "none";
-});
-
-function displayNames(value) {
-  input.value = value;
-  removeElements();
-  listContainer.style.display = "none";
-}
-
-function removeElements() {
-  let items = document.querySelectorAll(".list-items");
-  items.forEach((item) => {
-    item.remove();
-  });
-}

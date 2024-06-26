@@ -12,15 +12,88 @@
     <title>FairFinder - Find & Check Bus Tickets</title>
     <script>
         window.onload = function() {
-            const urlParams = new URLSearchParams(window.location.search);
+        const urlParams = new URLSearchParams(window.location.search);
             if (urlParams.has('clicked') && urlParams.get('clicked') === 'true') {
                 const var1 = urlParams.get('var1');
                 const var2 = urlParams.get('var2');
-                document.getElementById('userInput').value = var1;
-                document.getElementById('userInput2').value = var2;
+                document.getElementById('from').value = var1;
+                document.getElementById('to').value = var2;
                 document.getElementById('search').click();
             }
-        };
+        let locations=[
+            'Colombo',
+            'Codsf',
+            'Commmm',
+            'Cosfs',
+            'Csss',
+            'Coseg',
+            'Csdoseg',
+            'Comg',
+            'Anuradhapura',
+            'Matara',
+            'Galle',
+            'Polonnaruwa',
+            'Jaffna',
+            'Hatton',
+            'Ella',
+            'Badulla'
+        ];
+        const sortedNames = locations.sort();
+        const inputBox = document.getElementById("from");
+        const resultsBox = document.querySelector(".result-box ul");
+        const inputBox2 = document.getElementById("to");
+        const resultsBox2 = document.querySelector(".result-box2 ul");
+
+        inputBox.addEventListener('keyup', function() {
+            let result = [];
+            let input = inputBox.value;
+            if (input.length) {
+                result = sortedNames.filter((keyword) => {
+                    return keyword.toLowerCase().includes(input.toLowerCase());
+                });
+            }
+            display(result);
+        });
+        function display(result) {
+            resultsBox.innerHTML = ''; 
+            if (result.length > 0) {
+                result.forEach((item) => {
+                    const li = document.createElement('li');
+                    li.textContent = item;
+                    li.addEventListener('click', () => {
+                        inputBox.value = item;
+                        resultsBox.innerHTML = ''; 
+                    });
+                    resultsBox.appendChild(li);
+                });
+            }
+        }
+        inputBox2.addEventListener('keyup', function() {
+            let result = [];
+            let input = inputBox2.value;
+            if (input.length) {
+                result = sortedNames.filter((keyword) => {
+                    return keyword.toLowerCase().includes(input.toLowerCase());
+                });
+            }
+            display2(result);
+        });      
+        function display2(result) {
+            resultsBox2.innerHTML = ''; 
+            if (result.length > 0) {
+                result.forEach((item) => {
+                    const li = document.createElement('li');
+                    li.textContent = item;
+                    li.addEventListener('click', () => {
+                        inputBox2.value = item;
+                        resultsBox2.innerHTML = ''; 
+                    });
+                    resultsBox2.appendChild(li);
+                });
+            }
+        }
+        
+    };
     </script>
 </head>
 <body>
@@ -54,16 +127,17 @@
                     <div class="tofrom">
                         <div class="from">
                             <div class="searchHeading">ORIGIN</div>
-                            <input type="text" id="userInput" class="fromBar" placeholder="Leaving from...">
+                            <input type="text" id="from" class="fromBar" placeholder="Leaving from..." autocomplete="off">
                             <div class="result-box">
-                                <ul class="list">
-                                        <li>sd</li>
-                                </ul>
+                                <ul></ul>
                             </div>
                         </div>
                         <div class="to">
                             <div class="searchHeading">DESTINATION</div>
-                            <input type="text" id="userInput2" class="toBar" placeholder="Going to...">
+                            <input type="text" id="to" class="toBar" placeholder="Going to...">
+                            <div class="result-box2">
+                                <ul></ul>
+                            </div>
                         </div>
                     </div>
                     <div class="passenger">

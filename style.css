@@ -903,17 +903,50 @@
     z-index: 9999;
     font-family: "Roboto", sans-serif;
     font-size: 100%;
-    width: 11%;
+    width: 10%;
     max-height: 30vh;
-    overflow-y: auto; 
+    overflow-y: auto;
+    list-style: none;
+    padding: 0; 
+    margin: 0; 
+    padding: 0.4%;
+    border-bottom-left-radius: px;
 }
 .result-box ul li{
     list-style: none;
     padding: 3.5% 0%;
     cursor: pointer;
     padding-left: 10%;
+    border-radius: 8px;
 }
 .result-box ul li:hover{
     background-color: #ddeff8;
 }
+.result-box2 ul{
+    position: absolute;
+    color: #20415b;
+    background-color: white;
+    z-index: 9999;
+    font-family: "Roboto", sans-serif;
+    font-size: 100%;
+    width: 10%;
+    max-height: 30vh;
+    overflow-y: auto;
+    list-style: none;
+    padding: 0; 
+    margin: 0; 
+    padding: 0.4%;
+    border-bottom-left-radius: px;
+}
+.result-box2 ul li{
+    list-style: none;
+    padding: 3.5% 0%;
+    cursor: pointer;
+    padding-left: 10%;
+    border-radius: 8px;
+}
+.result-box2 ul li:hover{
+    background-color: #ddeff8;
+}
+
 
