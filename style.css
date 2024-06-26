@@ -863,18 +863,36 @@
 .busInfoH2{
     color: #446883;
 }
-.powered{
+.alertBar {
+    position: fixed;
+    background-color: #515151;
+    width: 100%;
+    height: 10vh;
+    bottom: -100px;
+    transition: bottom 1.5s ease-in-out; 
+    padding-top: 2%;
+    padding-left: 7%;
+    z-index: 9999;
+    font-family: "Roboto", sans-serif;
+}
+.alertBtn{
     position: absolute;
-    background-color: black;
-    height: 7%;
-    width: 8%;
+    width: 5%;
+    height: 35%;
+    background-color: #ead347;
     display: flex;
     justify-content: center;
     align-items: center;
-    right: 0%;
-    bottom: 14%;
+    font-size: 90%;
+    cursor: pointer;
+    border-radius: 5px;
+    right: 13%;
+    top: 35%;
+}
+.alertBtn:hover{
+    background-color: #d5bc27;
+}
+.alertHeading,.alertTagline{
     color: white;
-    font-family: "Roboto", sans-serif;
-    font-size: 80%;
-    border-radius: 15px 0px 0px 15px;
+    font-size: 95%;
 }

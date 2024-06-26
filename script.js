@@ -32,6 +32,7 @@ function search(){
     var noTrips= document.getElementById('noTripDiv');
     const userInput1 = document.getElementById('userInput');
     const userInput2 = document.getElementById('userInput2');
+    triggerAlert();
     if(1==1){ //here search correct logic
         document.getElementById('start').textContent = userInput1.value;
         document.getElementById('end').textContent = userInput2.value;
@@ -80,4 +81,18 @@ function popular6() {
     const var1 = 'Colombo';
     const var2 = 'Mannar';
     window.location.href = `../Pages/pricechecker.html?clicked=true&var1=${var1}&var2=${var2}`;
+}
+function triggerAlert() {
+    var div = document.getElementById('alertBar');
+    div.style.display = 'block';
+    setTimeout(function() {
+        div.style.bottom = '0';
+    }, 10); 
+}
+function removeAlert() {
+    var div = document.getElementById('alertBar');
+    div.style.bottom = '-100px'; 
+    setTimeout(function() {
+        div.style.display = 'none';
+    }, 1000); 
 }
