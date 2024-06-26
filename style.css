@@ -502,7 +502,7 @@
     width: 85%;
     position: absolute;
     display: block;
-    z-index: 9999;
+    z-index: 999;
     display: flex;
 }
 .initialDiv_textarea{
@@ -896,3 +896,24 @@
     color: white;
     font-size: 95%;
 }
+.result-box ul{
+    position: absolute;
+    color: #20415b;
+    background-color: white;
+    z-index: 9999;
+    font-family: "Roboto", sans-serif;
+    font-size: 100%;
+    width: 11%;
+    max-height: 30vh;
+    overflow-y: auto; 
+}
+.result-box ul li{
+    list-style: none;
+    padding: 3.5% 0%;
+    cursor: pointer;
+    padding-left: 10%;
+}
+.result-box ul li:hover{
+    background-color: #ddeff8;
+}
+
