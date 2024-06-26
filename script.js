@@ -30,6 +30,7 @@ function filter() {
 function search(){
     var resultsDiv=document.getElementById('searchResults');
     var noTrips= document.getElementById('noTripDiv');
+    var loadDiv=document.getElementById('intitalDiv');
     const userInput1 = document.getElementById('from');
     const userInput2 = document.getElementById('to');
     triggerAlert();
@@ -49,7 +50,9 @@ function search(){
     else{
         document.getElementById('resultCount').textContent = '0 result';
         noTrips.style.display = 'block';
+        showDate();
         resultsDiv.style.opacity = '1';
+        loadDiv.style.opacity='0';
     }
 }
 function popular1() {

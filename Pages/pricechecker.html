@@ -104,6 +104,7 @@
     </div>
     <div class="container4">
         <div class="divider2"></div>
+        <div class="mobileHeader"></div>
         <div class="contentArea">
             <div class="header">
                 <img class="headerIcon" src="../Assets/logo.png">
@@ -113,6 +114,7 @@
             <div class="middleBlock">
                 <div class="checkerHeading">Discover Affordable Bus Fares...</div><br>
                 <div class="searchBar">
+                    <div class="divider3"></div>
                     <div class="toggleBtn">
                         <div onclick="decrease()"  class="toggleI">
                             <img class="swapIcon" src="../Assets/sub.png">
@@ -174,13 +176,13 @@
                 </div>  
                 <div class="lower_2">
                     <div class="lower_left">
-                        <div class="filterMenu">Quick filters<br><br>
+                        <div class="filterMenu">Quick filters<br><br  class="removeGap">
                             <div class="checkboxes">
-                                <input class="cBox" type="checkbox" checked id="normal">  Normal<br>
-                                <input class="cBox" type="checkbox"  id="luxury">  Luxury<br>
+                                <input class="cBox" type="checkbox" checked id="normal">  Normal<br class="removeGap">
+                                <input class="cBox" type="checkbox"  id="luxury">  Luxury<br class="removeGap">
                                 <input class="cBox" type="checkbox"  id="expressluxury">  Expressway Luxury
                             </div>
-                        <div onclick="filter()" class="filterBtn"><img class="filterIcon" src="../Assets/filter.png">&nbsp;Filter</div>    
+                            <div onclick="filter()" class="filterBtn"><img class="filterIcon removeGap" src="../Assets/filter.png">&nbsp;Filter</div>    
                         </div>
                     </div>
                     <div class="lower_right">
@@ -191,9 +193,9 @@
                         </div>
                         <div class="resultCard">
                             <div class="locations">
-                                <span id="start" class="start">Colombo Fort</span>
+                                <span id="start" class="start"></span>
                                 <img class="arrow" src="../Assets/arrow.png">
-                                <span id="end" class="end">Anuradhapura</span>
+                                <span id="end" class="end"></span>
                             </div>
                             <div class="businfo">
                                 <img class="infoIcon" src="../Assets/busicon.png">&nbsp;
@@ -201,7 +203,7 @@
                                 <img class="infoIcon" src="../Assets/personicon.png">&nbsp;&nbsp;
                                 <span id="bus_infoCount" class="bus_infoCount"></span>&nbsp;<span id="bus_infoText">person</span>
                             </div>
-                            <div class="price">LRK&nbsp;<span class="ticketPrice">000</span></div>
+                            <div class="price">LRK&nbsp;<span class="ticketPrice">0000</span></div>
                         </div>
                     </div>
                 </div>
@@ -218,6 +220,7 @@
             </div>
         </div>
     </div>
+    <div class="mobilefooter"></div>
     <script>
         let count=1;
         function updateCounter() {

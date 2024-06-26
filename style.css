@@ -2,6 +2,9 @@
     padding: 0px;
     margin: 0px;
 }
+.mobilefooter,.mobileHeader{
+    display: none;
+}
 .container{
     display: flex;
     flex-direction: column;
@@ -501,9 +504,9 @@
     height: 43vh;
     width: 85%;
     position: absolute;
-    display: block;
     z-index: 999;
     display: flex;
+    opacity: 1;
 }
 .initialDiv_textarea{
     height: 100%;
@@ -949,4 +952,268 @@
     background-color: #ddeff8;
 }
 
-
+@media (max-width:769px) {
+    .header,.footer{
+        display: none;
+    }
+    .mobileHeader{
+        background-color: red;
+        width: 100%;
+        height: 12vh;
+        display: block;
+    }
+    .mobilefooter{
+        background-color: red;
+        width: 100%;
+        height: 6vh;
+        display: block;
+    }
+    .divider,.divider2{
+        display: none;
+    }
+    .homeImg{
+        display: none;
+    }
+    .homeText{
+        padding-top: 15%;
+    }
+    .mainText{
+        font-size: 250%;
+    }
+    .tagline{
+        font-size: 95%;
+    }
+    .checkNowBtn{
+        width: 60%;
+        font-size: 100%;
+        padding: 4% 0%;
+        margin-top: 13%;
+    }
+    .featuresBar{
+        flex-direction: column;
+        height: 50vh;
+        row-gap: 9%;
+        align-items: start;
+        padding: 3% 10%;
+    }
+    .line{
+        flex-direction: column;
+    }
+    .cards{
+        width: 100%;
+        height: 22vh;
+        row-gap: 10%;
+        margin-bottom: 8%;
+    }
+    .removeGap{
+        display: none;
+    }
+    .cards:hover{
+        animation: none;
+    }
+    .busImg{
+        display: none;
+    }
+    .middleBlock{
+        margin-top:10%;
+        padding-bottom: 25%;
+    }
+    .checkerHeading{
+        font-size: 150%;
+        margin-top: 5%;
+    }
+    .searchBar{
+        flex-direction: column;
+        width: 100%;
+        height: 23vh;
+        border-radius: 8px;
+        justify-content: center;
+    }
+    .intitalDiv{
+        margin-top: 10%;
+        flex-direction: column;
+    }
+    .initialDiv_textarea{
+        margin-left: 0%;
+        width: 100%;
+    }
+    .box{
+        width: 100%;
+        margin-top: 5%;
+    }
+    .initialDivHeading{
+        margin-left: 0%;
+    }
+    .initialDivTagline{
+        padding-bottom: 5%;
+    }
+    .search{
+        position: absolute;
+        width: 85%;
+        height: 6%;
+        border-radius: 8px;
+        margin-top: 63%;
+        padding: 0%;
+    }
+    .divider3{
+        position: absolute;
+        width: 85%;
+        height: 1px;
+        background-color: #ddeff8;
+        margin-top: 12%;
+    }
+    .fromBar,.toBar{
+        width: 95%;
+    }
+    .tofrom{
+        flex-direction: column;
+        width: 100%;
+        height: 50%;
+        row-gap: 5%;
+    }
+    .to{
+        width: 100%;
+        height: 50%;
+        margin-top: 2%;
+    }
+    .from{
+        width: 100%;
+        height: 50%;
+    }
+    .passenger{
+        width: 100%;
+        height: 25%;
+        margin-top: 7%;
+        padding-left: 5%;
+    }
+    .toggleBtn{
+        margin-top: 28%;
+        margin-right: -25%;
+        height: 5%;
+    }
+    .swap{
+        margin-top: -15%;
+        margin-left: 45%;
+        transform: rotate(90deg);
+    }
+    .toggleI,.swap{
+        height: 30px;
+        width: 30px;
+    }
+    .result-box ul,.result-box2 ul{
+        width: 62%;
+    }
+    .lowerBlock{
+        margin-top: 15%;
+    }
+    .lower_2{
+        flex-direction: column;
+    }
+    .lower_left{
+        width: 100%;
+        padding-left: 0%;
+    }
+    .lower_right{
+        width: 100%;
+        height: 25vh;
+    }
+    .resultHeading{
+        font-size: 70%;
+    }
+    .resultTagline{
+        font-size: 110%;
+    }
+    .resultCard{
+        width: 100%;
+        margin: 0%;
+        height: 90%;
+        border-radius: 15px;
+        border-radius: 0px 20px 20px 0px;
+    }
+    .locations{
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        padding-left: 8%;
+        padding-top: 0%;
+    }
+    .start,.end{
+        font-size: 70%;
+        margin-top: 5%;
+    }
+    .toBar,.fromBar,.noPassenger{
+        font-size: 88%;
+        padding: 1.5% 0%;
+    }
+    .searchHeading{
+        font-size: 54%;
+    }
+    .arrow{
+        transform: rotate(90deg);
+        position: absolute;
+        height: 3%;
+        margin-top: 10%;
+        margin-left: -11%;
+    }
+    .businfo{
+        width: 70%;
+        height: 3%;
+        padding-left: 1%;
+        margin-top: -3%;
+    }
+    .price{
+        margin-top: 9%;
+        width: 35%;
+        padding: 0% 4%;
+        margin-left: 0%;
+        font-size: 80%;
+        height: 20%;
+        border-radius: 0px 10px 10px 0px;
+    }
+    .noTrips{
+        width: 85%;
+        font-size: 70%;
+    }
+    .notripImg{
+        height: 12vh;
+    }
+    .noTripHeading{
+        padding-bottom: 3%;
+    }
+    .alertBar{
+        font-size: 70%;
+        padding: 0%;
+        text-align: center;
+        height: 16vh;
+        padding-top: 4%;
+    }
+    .alertBtn{
+        width: 25%;
+        height: 23%;
+        position: relative;
+        right: 0%;
+        top: 0%;
+        margin-top: 2%;
+        margin-left: 38%;
+    }
+    .checkboxes{
+        font-size: 80%;
+        padding-left: 0%;
+    }
+    .filterBtn{
+        position: absolute;
+        margin-top: -14%;
+        margin-left: 70%;
+        font-size: 100%;
+        background-color: transparent;
+        color: red;
+        font-weight: 700;
+    }
+    .filterBtn:hover{
+        background-color: transparent;
+    }
+    .filterMenu{
+        font-size: 80%;
+        padding-bottom: 5%;
+    }
+}
