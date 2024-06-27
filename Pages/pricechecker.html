@@ -79,7 +79,7 @@
             display2(result);
         });      
         function display2(result) {
-            resultsBox2.innerHTML = ''; 
+            resultsBox2.innerHTML = '';
             if (result.length > 0) {
                 result.forEach((item) => {
                     const li = document.createElement('li');
@@ -142,14 +142,14 @@
                         <div class="from">
                             <div class="searchHeading">ORIGIN</div>
                             <input type="text" id="from" class="fromBar" placeholder="Leaving from..." autocomplete="off">
-                            <div class="result-box">
+                            <div id="result-box1" class="result-box">
                                 <ul></ul>
                             </div>
                         </div>
                         <div class="to">
                             <div class="searchHeading">DESTINATION</div>
                             <input type="text" id="to" class="toBar" placeholder="Going to...">
-                            <div class="result-box2">
+                            <div id="result-box2" class="result-box2">
                                 <ul></ul>
                             </div>
                         </div>
