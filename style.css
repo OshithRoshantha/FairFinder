@@ -958,7 +958,7 @@
     }
     .mobileHeader{
         background-color: #ddeff8;
-        width: 100%;
+        width: 90%;
         height: 12vh;
         display: block;
         display: flex;
@@ -1115,6 +1115,7 @@
     }
     .lowerBlock{
         margin-top: 15%;
+        height: 54vh;
     }
     .lower_2{
         flex-direction: column;
@@ -1139,6 +1140,7 @@
         height: 90%;
         border-radius: 15px;
         border-radius: 0px 20px 20px 0px;
+        opacity: 1;
     }
     .locations{
         flex-direction: column;
@@ -1253,7 +1255,7 @@
         position: fixed;
     }
     .formContainer{
-        height: 68vh;
+        height: 75vh;
         width: 85%;
         padding-left: 5%;
     }
@@ -1271,7 +1273,7 @@
         padding: 2.5% 0%;
     }
     .popupClose{
-        margin-top: 10%;
+        margin-top: 4%;
         margin-right: -25%;
     }
     .input{

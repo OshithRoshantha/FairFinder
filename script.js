@@ -36,13 +36,16 @@ function swap(){
 function filter() {
     var type = document.getElementById('normal');
     var noTrips= document.getElementById('noTripDiv');
+    var card=document.getElementById('resultCard');
     if (!type.checked) {
         showDate();
         document.getElementById('resultCount').textContent = '0 result';
         noTrips.style.display = 'block';
+        card.style.opacity='0';
     } else {
         document.getElementById('resultCount').textContent = '1 result';
         noTrips.style.display = 'none';
+        card.style.opacity='1';
     }
 }
 
@@ -52,12 +55,14 @@ function search(){
     var loadDiv=document.getElementById('intitalDiv');
     const userInput1 = document.getElementById('from');
     const userInput2 = document.getElementById('to');
+    var card=document.getElementById('resultCard');
     triggerAlert();
     if(1==1){ //here search correct logic
         document.getElementById('start').textContent = userInput1.value;
         document.getElementById('end').textContent = userInput2.value;
         document.getElementById('bus_infoCount').textContent = document.getElementById('counter').innerText;
         document.getElementById('intitalDiv').style.display = 'none';
+        card.style.opacity='1';
         if(document.getElementById('counter').innerText==1){
             document.getElementById('bus_infoText').textContent = 'person';
         }
@@ -71,6 +76,7 @@ function search(){
         noTrips.style.display = 'block';
         showDate();
         resultsDiv.style.opacity = '1';
+        card.style.opacity='0';
         loadDiv.style.opacity='0';
     }
 }
