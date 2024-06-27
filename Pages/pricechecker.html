@@ -97,6 +97,15 @@
     </script>
 </head>
 <body>
+    <div id="overlay" class="overlay">
+        <img onclick="closeOverlay()" class="overlayClose" src="../Assets/closeoverlay.png">
+        <div class="navigationHeader">Navigation</div>
+        <div class="overlaymenuContainer">
+            <a href="../Pages/home.html" class="overlayMenu">Home</a>
+            <a href="../Pages/pricechecker.html" class="overlayMenu">Check Price</a>
+            <a href="../Pages/contact.html" class="overlayMenu">Contact</a>
+        </div>
+    </div>
     <div id="alertBar" class="alertBar">
         <div class="alertHeading">We're currently updating our database to include more routes and fares.</div>
         <div class="alertTagline">Please note that Luxury Bus and Expressway Luxury Bus fares are not available at the moment.</div>
@@ -104,7 +113,10 @@
     </div>
     <div class="container4">
         <div class="divider2"></div>
-        <div class="mobileHeader"></div>
+        <div class="mobileHeader">
+            <img class="headerIcon" src="../Assets/logo.png">
+            <img onclick="openOverlay()" class="headerIcon sider" src="../Assets/dots.png">
+        </div>
         <div class="contentArea">
             <div class="header">
                 <img class="headerIcon" src="../Assets/logo.png">
@@ -220,7 +232,10 @@
             </div>
         </div>
     </div>
-    <div class="mobilefooter"></div>
+    <div class="mobilefooter mobilefooter2">
+        <div class="mobileFooterText">COSC 31103-Group 01</div>
+        <div class="mobileFooterText2">© 2024 FairFinder., All rights reserved</div>
+    </div>
     <script>
         let count=1;
         function updateCounter() {

@@ -12,9 +12,25 @@
     <title>FairFinder - Find & Check Bus Tickets</title>
 </head>
 <body>
-    
+    <div id="overlay" class="overlay">
+        <img onclick="closeOverlay()" class="overlayClose" src="../Assets/closeoverlay.png">
+        <div class="navigationHeader">Navigation</div>
+        <div class="overlaymenuContainer">
+            <a href="../Pages/home.html" class="overlayMenu">Home</a>
+            <a href="../Pages/pricechecker.html" class="overlayMenu">Check Price</a>
+            <a href="../Pages/contact.html" class="overlayMenu">Contact</a>
+        </div>
+    </div><div id="overlay" class="overlay">
+        <img onclick="closeOverlay()" class="overlayClose" src="../Assets/closeoverlay.png">
+        <a href="../Pages/home.html" class="overlayMenu">Home</a>
+        <a href="../Pages/pricechecker.html" class="overlayMenu">Check Price</a>
+        <a href="../Pages/contact.html" class="overlayMenu">Contact</a>
+    </div>
     <div class="container3">
-        <div class="mobileHeader"></div>
+        <div class="mobileHeader">
+            <img class="headerIcon" src="../Assets/logo.png">
+            <img onclick="openOverlay()" class="headerIcon sider" src="../Assets/dots.png">
+        </div>
         <div id="div1" class="opacity hidden"></div>
         <div  id="div2" class="formPopup hidden">
             <div class="formContainer">
@@ -77,7 +93,10 @@
                 <div class="author">COSC 31103-Group 01</div>
             </div>
         </div>
-        <div class="mobilefooter"></div>
+        <div class="mobilefooter">
+            <div class="mobileFooterText">COSC 31103-Group 01</div>
+            <div class="mobileFooterText2">© 2024 FairFinder., All rights reserved</div>
+        </div>
     </div>
     <script src="../script.js"></script>    
 </body>

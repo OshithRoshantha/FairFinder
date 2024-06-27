@@ -6,6 +6,15 @@ document.getElementById("hideForm").addEventListener("click", function() {
     document.getElementById("div1").classList.add("hidden");
     document.getElementById("div2").classList.add("hidden");
 });
+
+function openOverlay() {
+    document.getElementById('overlay').classList.add('active');
+}
+
+function closeOverlay() {
+    document.getElementById('overlay').classList.remove('active');
+}
+
 function showDate() {
     const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -15,6 +24,7 @@ function showDate() {
     const date = today.getDate();
     document.getElementById('date').textContent =`${dayName}, ${monthName} ${date}`;
 }
+
 function swap(){
     var fromInput = document.getElementById('from');
     var toInput = document.getElementById('to');
@@ -22,6 +32,7 @@ function swap(){
     fromInput.value = toInput.value;
     toInput.value = temp;
 }
+
 function filter() {
     var type = document.getElementById('normal');
     var noTrips= document.getElementById('noTripDiv');
@@ -34,6 +45,7 @@ function filter() {
         noTrips.style.display = 'none';
     }
 }
+
 function search(){
     var resultsDiv=document.getElementById('searchResults');
     var noTrips= document.getElementById('noTripDiv');
@@ -62,43 +74,52 @@ function search(){
         loadDiv.style.opacity='0';
     }
 }
+
 function popular1() {
     const var1 = 'Colombo';
     const var2 = 'Anuradhapura';
     window.location.href = `../Pages/pricechecker.html?clicked=true&var1=${var1}&var2=${var2}`;
 }
+
 function popular2() {
     const var1 = 'Colombo';
     const var2 = 'Galle';
     window.location.href = `../Pages/pricechecker.html?clicked=true&var1=${var1}&var2=${var2}`;
 }
+
 function popular3() {
     const var1 = 'Colombo';
     const var2 = 'Kandy';
     window.location.href = `../Pages/pricechecker.html?clicked=true&var1=${var1}&var2=${var2}`;
 }
+
 function popular4() {
     const var1 = 'Colombo';
     const var2 = 'Hatton';
     window.location.href = `../Pages/pricechecker.html?clicked=true&var1=${var1}&var2=${var2}`;
 }
+
 function popular5() {
     const var1 = 'Colombo';
     const var2 = 'Jaffna';
     window.location.href = `../Pages/pricechecker.html?clicked=true&var1=${var1}&var2=${var2}`;
 }
+
 function popular6() {
     const var1 = 'Colombo';
     const var2 = 'Mannar';
     window.location.href = `../Pages/pricechecker.html?clicked=true&var1=${var1}&var2=${var2}`;
 }
+
 function triggerAlert() {
     var div = document.getElementById('alertBar');
+    div.style.opacity='1';
     div.style.display = 'block';
     setTimeout(function() {
         div.style.bottom = '0';
     }, 10); 
 }
+
 function removeAlert() {
     var div = document.getElementById('alertBar');
     div.style.bottom = '-100px'; 

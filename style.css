@@ -2,7 +2,7 @@
     padding: 0px;
     margin: 0px;
 }
-.mobilefooter,.mobileHeader{
+.mobilefooter,.mobileHeader,.overlay{
     display: none;
 }
 .container{
@@ -957,16 +957,26 @@
         display: none;
     }
     .mobileHeader{
-        background-color: red;
+        background-color: #ddeff8;
         width: 100%;
         height: 12vh;
         display: block;
+        display: flex;
+        align-items: center;
+        padding-left: 10%;
     }
     .mobilefooter{
-        background-color: red;
+        border-top: solid 2px #ddeff8;
         width: 100%;
         height: 6vh;
         display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .mobilefooter2{
+        background-color: white;
     }
     .divider,.divider2{
         display: none;
@@ -1184,8 +1194,9 @@
         font-size: 70%;
         padding: 0%;
         text-align: center;
-        height: 16vh;
+        height: 14vh;
         padding-top: 4%;
+        opacity: 0;
     }
     .alertBtn{
         width: 25%;
@@ -1268,5 +1279,82 @@
     }
     .input2{
         width: 85%;
+    }
+    .headerIcon{
+       height: 3%;
+    }
+    .sider{
+        height: 4.2%;
+        left: 82.5%;
+        cursor: pointer;
+        border-radius: 50%;
+        padding: 2%;
+    }
+    .sider:hover{
+        background-color: #a7d9f0;
+    }
+    .overlay{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        background-color: #20415b;
+        z-index: 9999999;
+        display: block;
+        transition: right 0.5s ease-in-out;
+        right: -100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .overlay.active {
+        right: 0;
+    }
+    .overlayClose{
+        height: 5%;
+        position: relative;
+        margin-left: -70%;
+        margin-top: 10%;
+        cursor: pointer;
+        padding-bottom: 10%;
+    }
+    .overlayMenu{
+        color: white;
+        font-family: "Roboto", sans-serif;
+        font-size: 100%;
+        margin-top: 1%;
+        cursor: pointer;
+        text-decoration: none;
+        width: 90%;
+        padding: 2.5% 0%;
+        border-radius: 10px;
+        padding-left: 10%;
+    }
+    .overlayMenu:hover{
+        background-color: #2b5568;
+    }
+    .mobileFooterText,.mobileFooterText2{
+        font-family: "Roboto", sans-serif;
+        font-size: 65%;
+    }
+    .mobileFooterText{
+        font-weight: 600;
+    }
+    .navigationHeader{
+        font-family: "Roboto", sans-serif;
+        font-size: 70%;
+        background-color: #a7d9f0;
+        width: 60%;
+        padding: 1% 0%;
+        border-radius: 0px 10px 10px 0px;
+        text-align: center;
+        position: relative;
+        left: -20%;
+        margin-top: 5%;
+    }
+    .overlaymenuContainer{
+        display: flex;
+        flex-direction: column;
+        width: 85%;
+        margin-top: 8%;
     }
 }
