@@ -15,6 +15,13 @@ function showDate() {
     const date = today.getDate();
     document.getElementById('date').textContent =`${dayName}, ${monthName} ${date}`;
 }
+function swap(){
+    var fromInput = document.getElementById('from');
+    var toInput = document.getElementById('to');
+    var temp = fromInput.value;
+    fromInput.value = toInput.value;
+    toInput.value = temp;
+}
 function filter() {
     var type = document.getElementById('normal');
     var noTrips= document.getElementById('noTripDiv');

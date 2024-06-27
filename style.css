@@ -953,7 +953,7 @@
 }
 
 @media (max-width:769px) {
-    .header,.footer{
+    .header,.footer,.contactHeader,.footer2{
         display: none;
     }
     .mobileHeader{
@@ -1215,5 +1215,58 @@
     .filterMenu{
         font-size: 80%;
         padding-bottom: 5%;
+    }
+    .contactImg{
+        display: none;
+    }
+    .container3_1{
+        padding-top: 18%;
+        flex-direction: column;
+    }
+    .contactHeading{
+        font-size: 290%;
+        line-height: 80%;
+    }
+    .contactTagline{
+        font-size: 90%;
+        margin-top: 15%;
+    }
+    .support,.feedback{
+        width: 100%;
+        margin-top: 15%;
+    }
+    .feedback{
+        margin-bottom: 15%;
+    }
+    .formPopup,.opacity{
+        position: fixed;
+    }
+    .formContainer{
+        height: 68vh;
+        width: 85%;
+        padding-left: 5%;
+    }
+    .popupHeader{
+        font-size: 210%;
+    }
+    .popupTagline{
+        font-size: 85%;
+    }
+    .inputTag{
+        font-size: 80%;
+    }
+    .inputBtn{
+        width: 35%;
+        padding: 2.5% 0%;
+    }
+    .popupClose{
+        margin-top: 10%;
+        margin-right: -25%;
+    }
+    .input{
+        width: 50%;
+    }
+    .input2{
+        width: 85%;
     }
 }
