@@ -38,15 +38,20 @@
                 <div class="popupHeader">Let's Talk</div><br>
                 <div class="popupTagline">Please write your message and contact information below.<br> We will respond as soon as possible.</div>
                 <br><br class="removeGap">
-                <form>
+                <form method="post" action="" onsubmit="return formValidate()">
                     <div class="inputTag">Name</div>
-                    <input class="input" type="text" name="name" placeholder="John"><br>
+                    <input class="input" type="text" id="name" placeholder="John"><br>
+                    <p id="invalid-name">Invalid Name.</p>
+                    <p id="empty-name">Field is empty.</p>
                     <br><div class="inputTag">Email</div>
-                    <input class="input2" type="email" name="email" placeholder="John@example.com"><br>
+                    <input class="input2" type="email" id="email" placeholder="John@example.com"><br>
+                    <p id="invalid-email">Invalid email address.</p>
+                    <p id="empty-email">Field is empty.</p>
                     <br><div class="inputTag">Message</div>
-                    <textarea class="input3" name="message" placeholder="We value your feedback. Please share your thoughts..."></textarea>
+                    <textarea class="input3" id="message" placeholder="We value your feedback. Please share your thoughts..."></textarea>
+                    <p id="empty-message">Field is empty.</p>
                     <br><br><br class="removeGap">
-                    <button id="hideForm" class="boxBtn inputBtn">Submit</button>
+                    <input type="submit" id="hideForm" class="boxBtn inputBtn" value="Submit">
                 </form>
             </div>
         </div>

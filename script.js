@@ -134,5 +134,44 @@ function removeAlert() {
     }, 1000); 
 }
 
+function formValidate(){
+    var name=document.getElementById('name').value;
+    var email=document.getElementById('email').value;
+    var message=document.getElementById('message').value;
+    validity=true;
 
+    document.getElementById('empty-name').style.display="none";
+    document.getElementById('empty-email').style.display="none";
+    document.getElementById('empty-message').style.display="none";
+    document.getElementById('invalid-name').style.display="none";
+    document.getElementById('invalid-email').style.display="none";
+    document.getElementById('name').style.border="#20415b solid 1px";
+    document.getElementById('email').style.border="#20415b solid 1px";
+    document.getElementById('message').style.border="#20415b solid 1px";
+
+    if(email==""){
+        document.getElementById('empty-email').style.display="block";
+        document.getElementById('email').style.border="red solid 1px";
+        validity=false;
+    }else if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+        document.getElementById('invalid-email').style.display="block";
+        document.getElementById('email').style.border="red solid 1px";
+        validity=false;
+    }
+    if(name==""){
+        document.getElementById('empty-name').style.display="block";
+        document.getElementById('name').style.border="red solid 1px";
+        validity=false;
+    }else if(!/^[A-Za-z\s]+$/.test(name)){
+        document.getElementById('invalid-name').style.display="block";
+        document.getElementById('name').style.border="red solid 1px";
+        validity=false;     
+    }
+    if(message==""){
+        document.getElementById('empty-message').style.display="block";
+        document.getElementById('message').style.border="red solid 1px";
+        validity=false;
+    }
+    return validity;
+}
 

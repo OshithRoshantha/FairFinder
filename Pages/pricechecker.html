@@ -94,6 +94,29 @@
         }
         
     };
+    let count=1;
+    function updateCounter() {
+        document.getElementById('counter').innerText = count;
+        updateText();
+    }
+    function increase() {
+        count++;
+        updateCounter();
+    }
+    function decrease() {
+        if (count>1) {
+             count--;
+             updateCounter();
+            }
+    }
+    function updateText() {
+        const messageSpan = document.getElementById('passengerText');
+        if (count > 1) {
+            messageSpan.innerText = " passengers";
+        } else {
+            messageSpan.innerText = " passenger";
+        }
+    }
     </script>
 </head>
 <body>
@@ -188,14 +211,11 @@
                 </div>  
                 <div class="lower_2">
                     <div class="lower_left">
-                        <div onclick="filter()" class="filterBtn"><img class="filterIcon removeGap" src="../Assets/filter.png">&nbsp;Filter</div>    
-                        
-                        <div class="filterMenu">Quick filters<br><br  class="removeGap">
-                            
+                            <div class="filterMenu">Quick filters<br><br  class="removeGap">
                             <div class="checkboxes">
-                                <input class="cBox" type="checkbox" checked id="normal">  Normal<br class="removeGap">
-                                <input class="cBox" type="checkbox"  id="luxury">  Luxury<br class="removeGap">
-                                <input class="cBox" type="checkbox"  id="expressluxury">  Expressway Luxury
+                                <input onchange="filter()" class="cBox" type="checkbox" checked id="normal">  Normal<br class="removeGap">
+                                <input onchange="filter()" class="cBox" type="checkbox"  id="luxury">  Luxury<br class="removeGap">
+                                <input onchange="filter()" class="cBox" type="checkbox"  id="expressluxury">  Expressway Luxury
                             </div>
                             </div>
                     </div>
@@ -238,32 +258,6 @@
         <div class="mobileFooterText">COSC 31103-Group 01</div>
         <div class="mobileFooterText2">© 2024 FairFinder., All rights reserved</div>
     </div>
-    <script>
-        let count=1;
-        function updateCounter() {
-            document.getElementById('counter').innerText = count;
-            updateText();
-        }
-        function increase() {
-            count++;
-            updateCounter();
-        }
-        function decrease() {
-            if (count>1) {
-                count--;
-                updateCounter();
-            }
-        }
-        function updateText() {
-            const messageSpan = document.getElementById('passengerText');
-            if (count > 1) {
-                messageSpan.innerText = " passengers";
-            } else {
-                messageSpan.innerText = " passenger";
-            }
-        }
-        
-    </script> 
     <script src="../script.js"></script> 
 </body>
 </html>
