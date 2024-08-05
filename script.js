@@ -56,7 +56,6 @@ function search(){
     const userInput1 = document.getElementById('from');
     const userInput2 = document.getElementById('to');
     var card=document.getElementById('resultCard');
-    triggerAlert();
     if(1==1){ //here search correct logic
         document.getElementById('start').textContent = userInput1.value;
         document.getElementById('end').textContent = userInput2.value;
@@ -117,21 +116,9 @@ function popular6() {
     window.location.href = `../Pages/pricechecker.html?clicked=true&var1=${var1}&var2=${var2}`;
 }
 
-function triggerAlert() {
-    var div = document.getElementById('alertBar');
-    div.style.opacity='1';
-    div.style.display = 'block';
-    setTimeout(function() {
-        div.style.bottom = '0';
-    }, 10); 
-}
-
 function removeAlert() {
     var div = document.getElementById('alertBar');
-    div.style.bottom = '-100px'; 
-    setTimeout(function() {
-        div.style.display = 'none';
-    }, 1000); 
+    div.style.display = 'none'; 
 }
 
 function formValidate(){
