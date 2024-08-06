@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <link rel="stylesheet" href="../style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -124,9 +123,9 @@
         <img onclick="closeOverlay()" class="overlayClose" src="../Assets/closeoverlay.png">
         <div class="navigationHeader">Navigation</div>
         <div class="overlaymenuContainer">
-            <a href="../Pages/home.html" class="overlayMenu">Home</a>
-            <a href="../Pages/pricechecker.html" class="overlayMenu">Check Price</a>
-            <a href="../Pages/contact.html" class="overlayMenu">Contact</a>
+            <a href="../Pages/home.php" class="overlayMenu">Home</a>
+            <a href="../Pages/pricechecker.php" class="overlayMenu">Check Price</a>
+            <a href="../Pages/contact.php" class="overlayMenu">Contact</a>
         </div>
     </div>
     <div id="alertBar" class="alertBar">
@@ -145,8 +144,8 @@
         <div class="contentArea">
             <div class="header">
                 <img class="headerIcon" src="../Assets/logo.png">
-                <a href="../Pages/home.html" class="headerBtn">Home</a>
-                <a href="../Pages/contact.html" class="headerBtn">Contact</a>
+                <a href="../Pages/home.php" class="headerBtn">Home</a>
+                <a href="../Pages/contact.php" class="headerBtn">Contact</a>
             </div>
             <div class="middleBlock">
                 <div class="checkerHeading">Discover Affordable Bus Fares...</div><br>
@@ -246,10 +245,10 @@
             </div>
             <div class="footer">
                 <div class="copyright">© 2024 FairFinder., All rights reserved</div>
-                <a target="_blank" href="../Pages/underConstruction.html" style="text-decoration: none;">
+                <a target="_blank" href="../Pages/underConstruction.php" style="text-decoration: none;">
                     <div class="footerLinks">Terms of use</div>
                 </a>
-                <a target="_blank" href="../Pages/underConstruction.html" style="text-decoration: none;">
+                <a target="_blank" href="../Pages/underConstruction.php" style="text-decoration: none;">
                     <div class="footerLinks">Privacy</div>
                 </a>
                 <div class="author">COSC 31103-Group 01</div>

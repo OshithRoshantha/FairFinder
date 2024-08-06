@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <link rel="stylesheet" href="../style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,9 +15,9 @@
         <img onclick="closeOverlay()" class="overlayClose" src="../Assets/closeoverlay.png">
         <div class="navigationHeader">Navigation</div>
         <div class="overlaymenuContainer">
-            <a href="../Pages/home.html" class="overlayMenu">Home</a>
-            <a href="../Pages/pricechecker.html" class="overlayMenu">Check Price</a>
-            <a href="../Pages/contact.html" class="overlayMenu">Contact</a>
+            <a href="../Pages/home.php" class="overlayMenu">Home</a>
+            <a href="../Pages/pricechecker.php" class="overlayMenu">Check Price</a>
+            <a href="../Pages/contact.php" class="overlayMenu">Contact</a>
         </div>
     </div>
     <div class="container">
@@ -29,14 +28,14 @@
         <div class="contentArea">
             <div class="header">
                 <img class="headerIcon" src="../Assets/logo.png">
-                <a href="../Pages/pricechecker.html" class="headerBtn">Check Price</a>
-                <a href="../Pages/contact.html" class="headerBtn">Contact</a>
+                <a href="../Pages/pricechecker.php" class="headerBtn">Check Price</a>
+                <a href="../Pages/contact.php" class="headerBtn">Contact</a>
             </div>
         <div class="container1_2">
             <div class="homeText">
                 <div class="mainText">Find accurate bus tickets<br> for your next trip</div><br><br>
                 <div class="tagline">Are you tired of spending too much on bus tickets? Look no further!<br> FareFinder is here to help you find the correct prices for your bus journeys<br> quickly and easily.</div>
-                <a href="../Pages/pricechecker.html" class="checkNowBtn"><img class="searchIcon" src="../Assets/search.png"> Check Now</a>
+                <a href="../Pages/pricechecker.php" class="checkNowBtn"><img class="searchIcon" src="../Assets/search.png"> Check Now</a>
             </div>
             <img class="homeImg" src="../Assets/homeImg.png">
         </div>
@@ -74,10 +73,10 @@
         <br><br>
             <div class="footer">
                 <div class="copyright">© 2024 FairFinder., All rights reserved</div>
-                <a target="_blank" href="../Pages/underConstruction.html" style="text-decoration: none;">
+                <a target="_blank" href="../Pages/underConstruction.php" style="text-decoration: none;">
                     <div class="footerLinks">Terms of use</div>
                 </a>
-                <a target="_blank" href="../Pages/underConstruction.html" style="text-decoration: none;">
+                <a target="_blank" href="../Pages/underConstruction.php" style="text-decoration: none;">
                     <div class="footerLinks">Privacy</div>
                 </a>
                 <div class="author">COSC 31103-Group 01</div>
