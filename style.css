@@ -11,6 +11,9 @@ body{
 .removeDiv{
     display: none;
 }
+.constructionFooter{
+    display: none;
+}
 .container{
     display: flex;
     flex-direction: column;

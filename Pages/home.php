@@ -73,10 +73,10 @@
         <br><br>
             <div class="footer">
                 <div class="copyright">© 2024 FairFinder., All rights reserved</div>
-                <a target="_blank" href="../Pages/underConstruction.php" style="text-decoration: none;">
+                <a style="text-decoration: none;">
                     <div class="footerLinks">Terms of use</div>
                 </a>
-                <a target="_blank" href="../Pages/underConstruction.php" style="text-decoration: none;">
+                <a style="text-decoration: none;">
                     <div class="footerLinks">Privacy</div>
                 </a>
                 <div class="author">COSC 31103-Group 01</div>
