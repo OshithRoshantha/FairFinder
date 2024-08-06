@@ -11,6 +11,18 @@
     <title>FairFinder - Find & Check Bus Tickets</title>
 </head>
 <body>
+
+    <?php
+        $dbConnection=mysqli_connect("localhost:3306","root","");
+
+        if($dbConnection)
+            mysqli_query($dbConnection,"create database if not exists fairFinder");
+
+        mysqli_select_db($dbConnection,"fairFinder"); 
+        mysqli_query($dbConnection,"create table if not exists userFeedback(feedbackId int auto_increment, primary key(feedbackId),name varchar(25), email varchar(30) not null, message varchar(100))");
+        //add to table
+    ?>
+
     <div id="overlay" class="overlay">
         <img onclick="closeOverlay()" class="overlayClose" src="../Assets/closeoverlay.png">
         <div class="navigationHeader">Navigation</div>
@@ -37,17 +49,17 @@
                 <div class="popupHeader">Let's Talk</div><br>
                 <div class="popupTagline">Please write your message and contact information below.<br> We will respond as soon as possible.</div>
                 <br><br class="removeGap">
-                <form method="post" action="" onsubmit="return formValidate()">
+                <form method="post" action="contact.php" onsubmit="return formValidate()">
                     <div class="inputTag">Name</div>
-                    <input class="input" type="text" id="name" placeholder="John"><br>
+                    <input class="input" type="text" id="name" name="name" placeholder="John"><br>
                     <p id="invalid-name">Invalid Name.</p>
                     <p id="empty-name">Field is empty.</p>
                     <br><div class="inputTag">Email</div>
-                    <input class="input2" type="email" id="email" placeholder="John@example.com"><br>
+                    <input class="input2" type="email" id="email" name="email" placeholder="John@example.com"><br>
                     <p id="invalid-email">Invalid email address.</p>
                     <p id="empty-email">Field is empty.</p>
                     <br><div class="inputTag">Message</div>
-                    <textarea class="input3" id="message" placeholder="We value your feedback. Please share your thoughts..."></textarea>
+                    <textarea class="input3" id="message" name="message" placeholder="We value your feedback. Please share your thoughts..."></textarea>
                     <p id="empty-message">Field is empty.</p>
                     <br><br><br class="removeGap">
                     <input type="submit" id="hideForm" class="boxBtn inputBtn" value="Submit">
