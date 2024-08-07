@@ -127,7 +127,7 @@ function submitForm(event){
     var name=document.getElementById('name').value;
     var email=document.getElementById('email').value;
     var message=document.getElementById('message').value;
-    
+
     validity=true;
 
     document.getElementById('empty-name').style.display="none";
@@ -169,6 +169,9 @@ function submitForm(event){
             body: formData
         });
         document.getElementById('submitStatus').style.display = 'block';
+        setTimeout(() => {
+            window.location.reload();
+        }, 500);
     }
 }
 
