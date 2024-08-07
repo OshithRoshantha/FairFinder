@@ -1,6 +1,6 @@
 <html>
 <head>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet"  href="../style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -20,10 +20,35 @@
 
         mysqli_select_db($dbConnection,"fairFinder"); 
         mysqli_query($dbConnection,"create table if not exists userFeedback(feedbackID int auto_increment, primary key(feedbackID), userName varchar(25), userEmail varchar(30) not null, userMessage varchar(100))");
-        if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message']))
+        if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message'])){
             mysqli_query($dbConnection, "insert into userFeedback (userName, userEmail, userMessage) values('".$_POST['name']."', '".$_POST['email']."', '".$_POST['message']."')");
-
+        }
     ?>
+
+    <style>
+    .submitStatus{
+        position: absolute;
+        background-color: white;
+        width: 30vw;
+        height: 70vh;
+        display: none;
+        text-align: center;
+    }
+    .submitOk{
+        height: 20%;
+        margin-top: 33%;
+    }
+    .submitStatus-main{
+        font-family: "Roboto", sans-serif;
+        font-size: 150%;
+        font-weight: 600;
+        display: block;
+    }
+    .submitStatus-sub{
+        font-family: "Roboto", sans-serif;
+        font-size: 100%;
+    }
+    </style>
 
     <div id="overlay" class="overlay">
         <img onclick="closeOverlay()" class="overlayClose" src="../Assets/closeoverlay.png">
@@ -47,11 +72,16 @@
         <div id="div1" class="opacity hidden"></div>
         <div  id="div2" class="formPopup hidden">
             <div class="formContainer">
+                <div class="submitStatus" id="submitStatus">
+                    <img class="submitOk" src="../Assets/success.png"><br><br>
+                    <span class="submitStatus-main">Thank You!</span>
+                    <span class="submitStatus-sub">Your submission has been recived.</span>
+                </div>
                 <img id="hideForm" class="popupClose" src="../Assets/close.png">
                 <div class="popupHeader">Let's Talk</div><br>
                 <div class="popupTagline">Please write your message and contact information below.<br> We will respond as soon as possible.</div>
                 <br><br class="removeGap">
-                <form method="post" action="contact.php" onsubmit="return formValidate()">
+                <form id="contactForm">
                     <div class="inputTag">Name</div>
                     <input class="input" type="text" id="name" name="name" placeholder="John"><br>
                     <p id="invalid-name">Invalid Name.</p>
@@ -64,7 +94,7 @@
                     <textarea class="input3" id="message" name="message" placeholder="We value your feedback. Please share your thoughts..."></textarea>
                     <p id="empty-message">Field is empty.</p>
                     <br><br><br class="removeGap">
-                    <input type="submit" id="hideForm" class="boxBtn inputBtn" value="Submit">
+                    <input type="submit" id="submitButton" class="boxBtn inputBtn" value="Submit">
                 </form>
             </div>
         </div>
@@ -116,6 +146,9 @@
             <div class="mobileFooterText2">© 2024 FairFinder., All rights reserved</div>
         </div>
     </div>
-    <script src="../script.js"></script>    
+    <script src="../script.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', submitForm);
+    </script>   
 </body>
 </html>

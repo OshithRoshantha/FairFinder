@@ -121,10 +121,13 @@ function removeAlert() {
     div.style.display = 'none'; 
 }
 
-function formValidate(){
+function submitForm(event){
+    event.preventDefault();
+
     var name=document.getElementById('name').value;
     var email=document.getElementById('email').value;
     var message=document.getElementById('message').value;
+    
     validity=true;
 
     document.getElementById('empty-name').style.display="none";
@@ -159,6 +162,13 @@ function formValidate(){
         document.getElementById('message').style.border="red solid 1px";
         validity=false;
     }
-    return validity;
+    if (validity) {
+        let formData = new FormData(document.querySelector('form'));
+        fetch('contact.php', {
+            method: 'POST',
+            body: formData
+        });
+        document.getElementById('submitStatus').style.display = 'block';
+    }
 }
 
