@@ -19,8 +19,10 @@
             mysqli_query($dbConnection,"create database if not exists fairFinder");
 
         mysqli_select_db($dbConnection,"fairFinder"); 
-        mysqli_query($dbConnection,"create table if not exists userFeedback(feedbackId int auto_increment, primary key(feedbackId),name varchar(25), email varchar(30) not null, message varchar(100))");
-        //add to table
+        mysqli_query($dbConnection,"create table if not exists userFeedback(feedbackID int auto_increment, primary key(feedbackID), userName varchar(25), userEmail varchar(30) not null, userMessage varchar(100))");
+        if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message']))
+            mysqli_query($dbConnection, "insert into userFeedback (userName, userEmail, userMessage) values('".$_POST['name']."', '".$_POST['email']."', '".$_POST['message']."')");
+
     ?>
 
     <div id="overlay" class="overlay">
