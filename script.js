@@ -171,7 +171,7 @@ function submitForm(event){
         document.getElementById('submitStatus').style.display = 'block';
         setTimeout(() => {
             window.location.reload();
-        }, 500);
+        }, 600);
     }
 }
 

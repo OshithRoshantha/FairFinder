@@ -13,16 +13,13 @@
 <body>
 
     <?php
-        $dbConnection=mysqli_connect("localhost:3306","root","");
+        include './db_config.php';
 
-        if($dbConnection)
-            mysqli_query($dbConnection,"create database if not exists fairFinder");
-
-        mysqli_select_db($dbConnection,"fairFinder"); 
         mysqli_query($dbConnection,"create table if not exists userFeedback(feedbackID int auto_increment, primary key(feedbackID), userName varchar(25), userEmail varchar(30) not null, userMessage varchar(100))");
         if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message'])){
             mysqli_query($dbConnection, "insert into userFeedback (userName, userEmail, userMessage) values('".$_POST['name']."', '".$_POST['email']."', '".$_POST['message']."')");
         }
+
     ?>
 
     <style>

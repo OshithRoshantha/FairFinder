@@ -19,6 +19,9 @@
                 document.getElementById('to').value = var2;
                 document.getElementById('search').click();
             }
+        <?php 
+            include './db_config.php';
+        ?>    
         let locations=[
             'Colombo',
             'Codsf',
