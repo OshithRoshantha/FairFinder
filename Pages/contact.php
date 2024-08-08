@@ -13,7 +13,7 @@
 <body>
 
     <?php
-        include './db_config.php';
+        include '../db_config.php';
 
         mysqli_query($dbConnection,"create table if not exists userFeedback(feedbackID int auto_increment, primary key(feedbackID), userName varchar(25), userEmail varchar(30) not null, userMessage varchar(100))");
         if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message'])){
