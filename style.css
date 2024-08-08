@@ -911,7 +911,6 @@ body{
     z-index: 9999;
     font-family: "Roboto", sans-serif;
     font-size: 100%;
-    width: 15%;
     max-height: 30vh;
     overflow-y: auto;
     list-style: none;
@@ -935,7 +934,6 @@ body{
     z-index: 9999;
     font-family: "Roboto", sans-serif;
     font-size: 100%;
-    width: 25%;
     max-height: 30vh;
     overflow-y: auto;
     list-style: none;

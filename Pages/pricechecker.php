@@ -90,6 +90,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../Assets/favicon.png" type="image/png">
     <title>FairFinder - Find & Check Bus Tickets</title>
+    <style>
+        .result-box ul,.result-box2 ul{
+            width: 13%;
+        }
+        .searchBar{
+            width: 77%;
+        }
+        .toggleBtn{
+            right: 34%;
+        }
+        @media (max-width:769px) {
+            .result-box ul,.result-box2 ul{
+                width: 69%;
+            }
+            .searchBar{
+                width: 100%;
+            }
+            .toggleBtn{
+                right: 34%;
+            }
+        }
+    </style>
     <script>
         window.onload = function() {
         const urlParams = new URLSearchParams(window.location.search);

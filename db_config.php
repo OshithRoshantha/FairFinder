@@ -1,5 +1,5 @@
 <?php
-$dbConnection = mysqli_connect("localhost:3306", "root", "", "fairFinder");
+$dbConnection = mysqli_connect("localhost:3306", "root", "");
 if (!$dbConnection) {
     die("Connection failed: " . mysqli_connect_error());
 }
