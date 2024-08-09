@@ -1,84 +1,3 @@
-<?php
-    include '../db_config.php';
-
-    $locationQuery = "
-        select line1 as locations from normalbusdb
-        union
-        select line2 from normalbusdb
-        union
-        select line3 from normalbusdb
-        union
-        select line4 from normalbusdb
-        union
-        select line5 from normalbusdb
-        union
-        select line6 from normalbusdb
-        union
-        select line7 from normalbusdb
-        union
-        select line8 from normalbusdb
-        union
-        select line9 from normalbusdb
-        union
-        select line10 from normalbusdb
-        union
-        select line11 from normalbusdb
-        union
-        select line12 from normalbusdb
-        union
-        select line13 from normalbusdb
-        union
-        select line14 from normalbusdb
-        union
-        select line15 from normalbusdb
-        union
-        select line16 from normalbusdb
-        union
-        select line17 from normalbusdb
-        union
-        select line18 from normalbusdb
-        union
-        select line19 from normalbusdb
-        union
-        select line20 from normalbusdb
-        union
-        select line21 from normalbusdb
-        union
-        select line22 from normalbusdb
-        union
-        select line23 from normalbusdb
-        union
-        select line24 from normalbusdb
-        union
-        select line25 from normalbusdb
-        union
-        select line26 from normalbusdb
-        union
-        select line27 from normalbusdb
-        union
-        select line28 from normalbusdb
-        union
-        select line29 from normalbusdb
-        union
-        select line30 from normalbusdb
-        union
-        select line31 from normalbusdb
-        union
-        select line32 from normalbusdb
-        union
-        select line33 from normalbusdb
-        union
-        select line34 from normalbusdb;
-    ";
-
-    $output = mysqli_query($dbConnection, $locationQuery);
-    $locationsArray = [];
-    while ($row = mysqli_fetch_assoc($output)) {
-        $locationsArray[] = $row['locations'];
-    }
-    $locationsJson = json_encode($locationsArray);
-?>
-
 <html>
 <head>
     <link rel="stylesheet" href="../style.css">
@@ -100,6 +19,12 @@
         .toggleBtn{
             right: 34%;
         }
+        .swap{
+            left: 32.3%;
+        }
+        .to{
+            margin-left: 5%;
+        }
         @media (max-width:769px) {
             .result-box ul,.result-box2 ul{
                 width: 69%;
@@ -110,77 +35,82 @@
             .toggleBtn{
                 right: 34%;
             }
+            .to{
+                margin-left: 0%;
+            }
         }
     </style>
     <script>
         window.onload = function() {
-        const urlParams = new URLSearchParams(window.location.search);
+            const urlParams = new URLSearchParams(window.location.search);
             if (urlParams.has('clicked') && urlParams.get('clicked') === 'true') {
                 const var1 = urlParams.get('var1');
                 const var2 = urlParams.get('var2');
                 document.getElementById('from').value = var1;
                 document.getElementById('to').value = var2;
                 document.getElementById('search').click();
-            }  
-
-        let locations = <?php echo $locationsJson; ?>;
-        const sortedNames = locations.sort();
-        const inputBox = document.getElementById("from");
-        const resultsBox = document.querySelector(".result-box ul");
-        const inputBox2 = document.getElementById("to");
-        const resultsBox2 = document.querySelector(".result-box2 ul");
-
-        inputBox.addEventListener('keyup', function() {
-            let result = [];
-            let input = inputBox.value;
-            if (input.length) {
-                result = sortedNames.filter((keyword) => {
-                    return keyword.toLowerCase().includes(input.toLowerCase());
-                });
             }
-            display(result);
-        });
-        function display(result) {
-            resultsBox.innerHTML = ''; 
-            if (result.length > 0) {
-                result.forEach((item) => {
-                    const li = document.createElement('li');
-                    li.textContent = item;
-                    li.addEventListener('click', () => {
-                        inputBox.value = item;
+
+            fetch('../Services/autoSuggestions.php')
+                .then(response => response.json())
+                .then(locations => {
+                    const sortedNames = locations.sort();
+                    const inputBox = document.getElementById("from");
+                    const resultsBox = document.querySelector(".result-box ul");
+                    const inputBox2 = document.getElementById("to");
+                    const resultsBox2 = document.querySelector(".result-box2 ul");
+
+                    inputBox.addEventListener('keyup', function() {
+                        let result = [];
+                        let input = inputBox.value;
+                        if (input.length) {
+                            result = sortedNames.filter((keyword) => {
+                                return keyword.toLowerCase().includes(input.toLowerCase());
+                            });
+                        }
+                        display(result);
+                    });
+                    function display(result) {
                         resultsBox.innerHTML = ''; 
-                    });
-                    resultsBox.appendChild(li);
-                });
-            }
-        }
-        inputBox2.addEventListener('keyup', function() {
-            let result = [];
-            let input = inputBox2.value;
-            if (input.length) {
-                result = sortedNames.filter((keyword) => {
-                    return keyword.toLowerCase().includes(input.toLowerCase());
-                });
-            }
-            display2(result);
-        });      
-        function display2(result) {
-            resultsBox2.innerHTML = '';
-            if (result.length > 0) {
-                result.forEach((item) => {
-                    const li = document.createElement('li');
-                    li.textContent = item;
-                    li.addEventListener('click', () => {
-                        inputBox2.value = item;
-                        resultsBox2.innerHTML = ''; 
-                    });
-                    resultsBox2.appendChild(li);
-                });
-            }
-        }
-        
-    };
-
+                        if (result.length > 0) {
+                            result.forEach((item) => {
+                                const li = document.createElement('li');
+                                li.textContent = item;
+                                li.addEventListener('click', () => {
+                                    inputBox.value = item;
+                                    resultsBox.innerHTML = ''; 
+                                });
+                                resultsBox.appendChild(li);
+                            });
+                        }
+                    }
+                    inputBox2.addEventListener('keyup', function() {
+                        let result = [];
+                        let input = inputBox2.value;
+                        if (input.length) {
+                            result = sortedNames.filter((keyword) => {
+                                return keyword.toLowerCase().includes(input.toLowerCase());
+                            });
+                        }
+                        display2(result);
+                    });      
+                    function display2(result) {
+                        resultsBox2.innerHTML = '';
+                        if (result.length > 0) {
+                            result.forEach((item) => {
+                                const li = document.createElement('li');
+                                li.textContent = item;
+                                li.addEventListener('click', () => {
+                                    inputBox2.value = item;
+                                    resultsBox2.innerHTML = ''; 
+                                });
+                                resultsBox2.appendChild(li);
+                            });
+                        }
+                    }
+                })
+                .catch(error => console.error('Error fetching locations:', error));
+        };
 
     let count=1;
     function updateCounter() {
@@ -327,7 +257,7 @@
                                 <img class="infoIcon" src="../Assets/personicon.png">&nbsp;&nbsp;
                                 <span id="bus_infoCount" class="bus_infoCount"></span>&nbsp;<span id="bus_infoText">person</span>
                             </div>
-                            <div class="price">LRK&nbsp;<span class="ticketPrice">0000</span></div>
+                            <div class="price">LRK&nbsp;<span class="ticketPrice" id="showTicketPrice"></span></div>
                         </div>
                     </div>
                 </div>

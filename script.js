@@ -49,35 +49,42 @@ function filter() {
     }
 }
 
-function search(){
-    var resultsDiv=document.getElementById('searchResults');
-    var noTrips= document.getElementById('noTripDiv');
-    var loadDiv=document.getElementById('intitalDiv');
-    const userInput1 = document.getElementById('from');
-    const userInput2 = document.getElementById('to');
-    var card=document.getElementById('resultCard');
-    if(1==1){ //here search correct logic
-        document.getElementById('start').textContent = userInput1.value;
-        document.getElementById('end').textContent = userInput2.value;
-        document.getElementById('bus_infoCount').textContent = document.getElementById('counter').innerText;
-        document.getElementById('intitalDiv').style.display = 'none';
-        card.style.opacity='1';
-        if(document.getElementById('counter').innerText==1){
-            document.getElementById('bus_infoText').textContent = 'person';
-        }
-        else{
-            document.getElementById('bus_infoText').textContent = 'persons';
-        }
-        resultsDiv.style.opacity = '1'; 
-    }
-    else{
-        document.getElementById('resultCount').textContent = '0 result';
-        noTrips.style.display = 'block';
-        showDate();
-        resultsDiv.style.opacity = '1';
-        card.style.opacity='0';
-        loadDiv.style.opacity='0';
-    }
+function search() {
+    var resultsDiv = document.getElementById('searchResults');
+    var noTrips = document.getElementById('noTripDiv');
+    var loadDiv = document.getElementById('intitalDiv');
+    const userInput1 = document.getElementById('from').value;
+    const userInput2 = document.getElementById('to').value;
+    var card = document.getElementById('resultCard');
+
+    fetch(`../Services/getPrice.php?start_location=${userInput1}&end_location=${userInput2}`)
+        .then(response => response.text())
+        .then(price => {
+            if (price!='0') {
+                document.getElementById('start').textContent = userInput1;
+                document.getElementById('end').textContent = userInput2;
+                document.getElementById('bus_infoCount').textContent = document.getElementById('counter').innerText;
+                let counterValue = parseInt(document.getElementById('counter').innerText, 10);
+                document.getElementById('intitalDiv').style.display = 'none';
+                card.style.opacity = '1';
+
+                if (document.getElementById('counter').innerText == 1) {
+                    document.getElementById('bus_infoText').textContent = 'person';
+                } else {
+                    document.getElementById('bus_infoText').textContent = 'persons';
+                }
+
+                resultsDiv.style.opacity = '1'; 
+                document.getElementById('showTicketPrice').textContent=(price*counterValue);
+            } else {
+                document.getElementById('resultCount').textContent = '0 result';
+                noTrips.style.display = 'block';
+                showDate();
+                resultsDiv.style.opacity = '1';
+                card.style.opacity = '0';
+                loadDiv.style.opacity = '0';
+            }
+        })
 }
 
 function popular1() {
