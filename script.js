@@ -88,37 +88,37 @@ function search() {
 }
 
 function popular1() {
-    const var1 = 'Colombo';
-    const var2 = 'Anuradhapura';
+    const var1 = 'Colombo Fort';
+    const var2 = 'Anuradhapura New Bus Stand';
     window.location.href = `../Pages/pricechecker.php?clicked=true&var1=${var1}&var2=${var2}`;
 }
 
 function popular2() {
-    const var1 = 'Colombo';
+    const var1 = 'Colombo Fort';
     const var2 = 'Galle';
     window.location.href = `../Pages/pricechecker.php?clicked=true&var1=${var1}&var2=${var2}`;
 }
 
 function popular3() {
-    const var1 = 'Colombo';
+    const var1 = 'Colombo Fort';
     const var2 = 'Kandy';
     window.location.href = `../Pages/pricechecker.php?clicked=true&var1=${var1}&var2=${var2}`;
 }
 
 function popular4() {
-    const var1 = 'Colombo';
+    const var1 = 'Colombo Fort';
     const var2 = 'Hatton';
     window.location.href = `../Pages/pricechecker.php?clicked=true&var1=${var1}&var2=${var2}`;
 }
 
 function popular5() {
-    const var1 = 'Colombo';
+    const var1 = 'Colombo Fort';
     const var2 = 'Jaffna';
     window.location.href = `../Pages/pricechecker.php?clicked=true&var1=${var1}&var2=${var2}`;
 }
 
 function popular6() {
-    const var1 = 'Colombo';
+    const var1 = 'Colombo Fort';
     const var2 = 'Mannar';
     window.location.href = `../Pages/pricechecker.php?clicked=true&var1=${var1}&var2=${var2}`;
 }
