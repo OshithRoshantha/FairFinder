@@ -66,6 +66,7 @@ function search() {
                 document.getElementById('bus_infoCount').textContent = document.getElementById('counter').innerText;
                 let counterValue = parseInt(document.getElementById('counter').innerText, 10);
                 document.getElementById('intitalDiv').style.display = 'none';
+                noTrips.style.display = 'none';
                 card.style.opacity = '1';
 
                 if (document.getElementById('counter').innerText == 1) {
