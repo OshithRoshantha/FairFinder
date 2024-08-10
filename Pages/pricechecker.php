@@ -183,14 +183,14 @@
                     </div>
                     <div class="tofrom">
                         <div class="from">
-                            <div class="searchHeading">ORIGIN</div>
+                            <div class="searchHeading sH-origin">ORIGIN</div>
                             <input type="text" id="from" class="fromBar" placeholder="Leaving from..." autocomplete="off">
                             <div id="result-box1" class="result-box">
                                 <ul></ul>
                             </div>
                         </div>
                         <div class="to">
-                            <div class="searchHeading">DESTINATION</div>
+                            <div class="searchHeading sH-destination">DESTINATION</div>
                             <input type="text" id="to" class="toBar" placeholder="Going to...">
                             <div id="result-box2" class="result-box2">
                                 <ul></ul>

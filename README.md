@@ -36,7 +36,7 @@ This project is a simple web application that allows users to check bus ticket p
      - Click **Go** to import the data into the table.     
 
 6. **Configure the Database Connection**:
-   - Open `config.php` in the project root.
+   - Open `db_config.php` in the project root.
    - Update the database credentials to match your setup.
 
 7. **Run the Application**:
@@ -52,6 +52,3 @@ This project is a simple web application that allows users to check bus ticket p
    - The application will display the ticket price for the given route.
    - If no trips are available, a message will be shown.
 
-## Contributing
-
-If you would like to contribute to this project, feel free to submit a pull request or open an issue for discussion.

@@ -53,11 +53,16 @@ function search() {
     var resultsDiv = document.getElementById('searchResults');
     var noTrips = document.getElementById('noTripDiv');
     var loadDiv = document.getElementById('intitalDiv');
-    const userInput1 = document.getElementById('from').value;
-    const userInput2 = document.getElementById('to').value;
+    const userInput1 = document.getElementById('from').value.trim();
+    const userInput2 = document.getElementById('to').value.trim();
     var card = document.getElementById('resultCard');
-
-    fetch(`../Services/getPrice.php?start_location=${userInput1}&end_location=${userInput2}`)
+    if(userInput1=="" || userInput2==""){
+        document.getElementById('intitalDiv').style.display = 'flex';
+        card.style.opacity = '0';
+        resultsDiv.style.opacity = '0'; 
+    }
+    else{
+        fetch(`../Services/getPrice.php?start_location=${userInput1}&end_location=${userInput2}`)
         .then(response => response.text())
         .then(price => {
             if (price!='0') {
@@ -86,6 +91,7 @@ function search() {
                 loadDiv.style.opacity = '0';
             }
         })
+    }    
 }
 
 function popular1() {
