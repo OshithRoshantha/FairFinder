@@ -19,16 +19,15 @@ This project is a simple web application that allows users to check bus ticket p
 
 3. **Database Setup**:
    - Open phpMyAdmin via XAMPP.
-   - Create a new database (e.g., `fairfinder`).
-   - Import the provided SQL file (`normalbusdb.sql`) into your database.
+   - Create a new database (`fairfinder`).
 
 4. **Import the Table Structure**:
    - You can use the provided `.sql` file to create the required table structure:
-     - In phpMyAdmin, select your new database.
+     - In phpMyAdmin, select your database (`fairfinder`).
      - Go to the **Import** tab.
      - Choose the `SQL/createTable.sql` file located in the project directory.
      - Click **Go** to execute the SQL script and create the table.
-     - 
+
 5. **Populate the Table with Data**:
    - After creating the table, populate it with data using the provided `.csv` file:
      - Select the table in phpMyAdmin.
@@ -56,4 +55,3 @@ This project is a simple web application that allows users to check bus ticket p
 ## Contributing
 
 If you would like to contribute to this project, feel free to submit a pull request or open an issue for discussion.
-
