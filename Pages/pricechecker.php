@@ -270,12 +270,12 @@
                 <a style="text-decoration: none;">
                     <div class="footerLinks">Privacy</div>
                 </a>
-                <div class="author">COSC 31103-Group 01</div>
+                <div class="author">By Oshith Roshantha</div>
             </div>
         </div>
     </div>
     <div class="mobilefooter mobilefooter2">
-        <div class="mobileFooterText">COSC 31103-Group 01</div>
+        <div class="mobileFooterText">By Oshith Roshantha</div>
         <div class="mobileFooterText2">© 2024 FairFinder., All rights reserved</div>
     </div>
     <script src="../script.js"></script> 
