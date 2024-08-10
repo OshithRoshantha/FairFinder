@@ -2,8 +2,6 @@
 
 This project is a simple web application that allows users to check bus ticket prices between two locations. The frontend is built with HTML, CSS, and JavaScript, while the backend is powered by PHP with a MySQL database managed via XAMPP.
 
-## Installation
-
 ### Prerequisites
 
 - XAMPP (or any local PHP server)
@@ -24,11 +22,25 @@ This project is a simple web application that allows users to check bus ticket p
    - Create a new database (e.g., `fairfinder`).
    - Import the provided SQL file (`normalbusdb.sql`) into your database.
 
-4. **Configure the Database Connection**:
+4. **Import the Table Structure**:
+   - You can use the provided `.sql` file to create the required table structure:
+     - In phpMyAdmin, select your new database.
+     - Go to the **Import** tab.
+     - Choose the `SQL/createTable.sql` file located in the project directory.
+     - Click **Go** to execute the SQL script and create the table.
+     - 
+5. **Populate the Table with Data**:
+   - After creating the table, populate it with data using the provided `.csv` file:
+     - Select the table in phpMyAdmin.
+     - Go to the **Import** tab.
+     - Choose the `SQL/normalBusDb.csv` file located in the project directory.
+     - Click **Go** to import the data into the table.     
+
+6. **Configure the Database Connection**:
    - Open `config.php` in the project root.
    - Update the database credentials to match your setup.
 
-5. **Run the Application**:
+7. **Run the Application**:
    - Start the Apache and MySQL services in XAMPP.
    - Navigate to `http://localhost/FairFinder/Pages/` in your web browser. 
 
