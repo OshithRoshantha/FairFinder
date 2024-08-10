@@ -10,13 +10,13 @@ with matchingrows as (
         t1.ticketno as startticketno,
         t2.ticketno as endticketno,
         col.column_name,
-        (t2.ticketno - t1.ticketno) as ticketdifference
+        abs(t2.ticketno - t1.ticketno) as ticketdifference
     from 
         normalbusdb t1
     join 
         normalbusdb t2
     on 
-        t1.ticketno < t2.ticketno
+        t1.ticketno != t2.ticketno
     cross join 
         (select 'line1' as column_name union all
          select 'line2' union all
