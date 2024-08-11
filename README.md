@@ -51,4 +51,3 @@ This project is a simple web application that allows users to check bus ticket p
 2. **View Results**:
    - The application will display the ticket price for the given route.
    - If no trips are available, a message will be shown.
-
