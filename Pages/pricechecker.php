@@ -41,6 +41,18 @@
         }
     </style>
     <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const fromInput = document.getElementById('from');
+            const toInput = document.getElementById('to');
+            fromInput.addEventListener('focus', function() {
+                fromInput.value = '';
+            });
+            toInput.addEventListener('focus', function() {
+                toInput.value = '';
+            });
+        });
+
         window.onload = function() {
             const urlParams = new URLSearchParams(window.location.search);
             if (urlParams.has('clicked') && urlParams.get('clicked') === 'true') {
@@ -112,29 +124,33 @@
                 .catch(error => console.error('Error fetching locations:', error));
         };
 
-    let count=1;
-    function updateCounter() {
-        document.getElementById('counter').innerText = count;
-        updateText();
-    }
-    function increase() {
-        count++;
-        updateCounter();
-    }
-    function decrease() {
-        if (count>1) {
-             count--;
-             updateCounter();
-            }
-    }
-    function updateText() {
-        const messageSpan = document.getElementById('passengerText');
-        if (count > 1) {
-            messageSpan.innerText = " passengers";
-        } else {
-            messageSpan.innerText = " passenger";
+        let count=1;
+        function updateCounter() {
+            document.getElementById('counter').innerText = count;
+            updateText();
         }
-    }
+
+        function increase() {
+            count++;
+            updateCounter();
+        }
+
+        function decrease() {
+            if (count>1) {
+                count--;
+                updateCounter();
+            }
+        }
+
+        function updateText() {
+            const messageSpan = document.getElementById('passengerText');
+            if (count > 1) {
+                messageSpan.innerText = " passengers";
+            } else {
+                messageSpan.innerText = " passenger";
+            }
+        }
+        
     </script>
 </head>
 <body>
